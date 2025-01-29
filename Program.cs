@@ -1,4 +1,4 @@
-﻿using DohClient;
+﻿using DohProxy;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Nito.AsyncEx;

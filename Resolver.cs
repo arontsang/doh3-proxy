@@ -1,4 +1,4 @@
-namespace DohClient;
+namespace DohProxy;
 
 public class Resolver(HttpClient httpClient)
 {

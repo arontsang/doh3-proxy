@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 using Microsoft.Extensions.Hosting;
 using Nito.AsyncEx;
 
-namespace DohClient;
+namespace DohProxy;
 
 public class TcpDnsListener(Resolver resolver) : BackgroundService
 {

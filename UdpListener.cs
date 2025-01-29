@@ -3,7 +3,7 @@ using System.Net.Sockets;
 using Microsoft.Extensions.Hosting;
 using Nito.AsyncEx;
 
-namespace DohClient;
+namespace DohProxy;
 
 public class UdpListener(Resolver resolver) : BackgroundService
 {
