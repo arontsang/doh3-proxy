@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: doh-proxy-server
+  namespace: doh3-proxy
+  labels:
+    app: doh-proxy-server
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: doh-proxy-server
+  template:
+    metadata:
+      name: doh-proxy-server
+      labels:
+        app: doh-proxy-server
+    spec:
+      containers:
+        - name: doh-proxy-server
+          image: arontsang/doh3-proxy:1.0.0
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 5353
+              protocol: TCP
+            - containerPort: 5353
+              protocol: UDP
+      restartPolicy: Always
+      
