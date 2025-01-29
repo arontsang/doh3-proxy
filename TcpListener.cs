@@ -13,7 +13,7 @@ public class TcpDnsListener(Resolver resolver) : BackgroundService
     
     protected override async Task ExecuteAsync(CancellationToken stoppingToken)
     {
-        using var listener = new TcpListener(IPAddress.Any, 5353);
+        using var listener = new TcpListener(IPAddress.Any, PortSelector.Port);
         listener.Start();
         while (!stoppingToken.IsCancellationRequested)
         {

@@ -9,7 +9,7 @@ public class UdpListener(Resolver resolver) : BackgroundService
 {
     protected override async Task ExecuteAsync(CancellationToken stoppingToken)
     {
-        using var udp = new UdpClient(5353);
+        using var udp = new UdpClient(PortSelector.Port);
         while (!stoppingToken.IsCancellationRequested)
         {
             var request = await udp.ReceiveAsync(stoppingToken);
