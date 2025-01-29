@@ -18,8 +18,11 @@ spec:
     spec:
       containers:
         - name: doh-proxy-server
-          image: arontsang/doh3-proxy:1.0.0
+          image: ghcr.io/arontsang/doh3-proxy:master
           imagePullPolicy: IfNotPresent
+          env:
+            - name: PORT
+              value: "5353"
           ports:
             - containerPort: 5353
               protocol: TCP
